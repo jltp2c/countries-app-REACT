@@ -3,7 +3,7 @@ import React from 'react'
 function Logo() {
   return (
     <div className='logo'>
-        <h3>React Countries</h3>
+        <h3>React World</h3>
     </div>
   )
 }
