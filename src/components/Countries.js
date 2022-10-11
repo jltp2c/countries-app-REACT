@@ -2,6 +2,7 @@ import axios from "axios";
 import {useEffect, useState} from 'react';
 import Card from "./Card";
 
+
 function Countries() {
 const [data,setData] = useState([]);
 const [range,setRange] =useState(36);
@@ -9,12 +10,15 @@ const [selectedRadio, setSelectedRadio] = useState("");
 const continents = ["Africa", "Europe", "Asia", "America", "Oceania"];
 
 useEffect(() => {
+   
     axios.get("https://restcountries.com/v3.1/all").then((res)=> setData(res.data))
 }, [])
 
 
+
   return (
-    <div className="countries">
+
+<div className="countries">
         <ul className="radio-container">
             <input type="range" 
             min="1" 
@@ -42,7 +46,8 @@ useEffect(() => {
             }
         </ul>
     </div>
-  );
+ )
+    
 };
 
 export default Countries
